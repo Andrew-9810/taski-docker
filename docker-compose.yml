@@ -22,13 +22,8 @@ services:
     volumes:
       - static:/frontend_static
   gateway:
-    # Сбилдить и запустить образ, 
-    # описанный в Dockerfile в папке gateway
     build: ./gateway/
     volumes:
       - static:/staticfiles/
-    # Ключ ports устанавливает
-    # перенаправление всех запросов с порта 8000 хоста
-    # на порт 80 контейнера.
     ports:
-      - 7000:80 
+      - 8000:80 
